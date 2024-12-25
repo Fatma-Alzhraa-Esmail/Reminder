@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quickcue/home/manager/navigation/navigation_cubit.dart';
 import 'package:quickcue/home/manager/navigation/navigation_state.dart';
+import 'package:quickcue/router/navigator.dart';
+import 'package:quickcue/router/routers.dart';
 
 class NavigationScreen extends StatelessWidget {
   const NavigationScreen({super.key});
@@ -16,7 +18,7 @@ class NavigationScreen extends StatelessWidget {
             NavigationCubit cubit = NavigationCubit.get(context);
             return Scaffold(
               resizeToAvoidBottomInset: false,
-              body:Container(
+              body: Container(
                   width: double.infinity,
                   child: cubit.screens[cubit.currentIndex]),
               bottomNavigationBar: Theme(
@@ -66,7 +68,9 @@ class NavigationScreen extends StatelessWidget {
               floatingActionButton: FloatingActionButton(
                 child: const Icon(Icons.add),
                 shape: CircleBorder(),
-                onPressed: () {},
+                onPressed: () {
+                  CustomNavigator.push(Routes.reminder);
+                },
                 tooltip: 'Increment',
                 focusElevation: 5,
                 highlightElevation: 2,
