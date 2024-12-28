@@ -13,6 +13,7 @@ class AddReminderCubit extends Cubit<AddReminderState> {
   
 
   Color color = const Color(0xffAC3931);
+  DateTime? dateTime;
   addReminder(ReminderModel reminder) async {
     reminder.color = color.value;
     emit(AddReminderLoading());
