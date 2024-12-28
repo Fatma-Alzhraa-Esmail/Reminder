@@ -1,16 +1,15 @@
 # quickcue
 
-A new Flutter project.
+📚 Description
+This Reminder App helps users efficiently manage their tasks, events, and important dates. With an intuitive user interface and seamless offline functionality powered by Hive, users can create, edit, and delete reminders with ease.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+✨ Key Features:
+🛎️ Set Reminders: Add tasks with custom titles, descriptions, and due dates. (Done)
+📦 Local Storage with Hive: Fast and secure data storage directly on the device.(Done)
+📅 Task Organization: Categorize tasks by priority, date, or custom tags.(in progress)
+📲 Notifications: Receive timely reminders for upcoming tasks.(in progress)
+🌙 Dark Mode Support: Comfortable viewing experience in both light and dark themes.(in progress)
+🛠️ Technologies Used:
+Flutter: Cross-platform UI framework.
+Hive: Lightweight and fast NoSQL database for Flutter.
+Local Notifications: Trigger notifications for reminders.
