@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:quickcue/home/pages/home_page.dart';
 import 'package:quickcue/reminder/models/reminder_model.dart';
-import 'package:quickcue/navigation/pages/navigation_page.dart';
 import 'package:quickcue/router/navigator.dart';
 import 'package:quickcue/router/routers.dart';
 import 'package:quickcue/simple_bloc_observer.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.navigation,
+      initialRoute: Routes.home,
       navigatorKey: CustomNavigator.navigatorState,
       navigatorObservers: [CustomNavigator.routeObserver],
       scaffoldMessengerKey: CustomNavigator.scaffoldState,
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const NavigationScreen(),
+      home: MyHomePage(),
     );
   }
 }

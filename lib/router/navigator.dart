@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quickcue/home/pages/home_page.dart';
-import 'package:quickcue/navigation/pages/navigation_page.dart';
+import 'package:quickcue/reminder/models/reminder_model.dart';
 import 'package:quickcue/reminder/pages/reminder_page.dart';
 import 'package:quickcue/router/routers.dart';
 
@@ -31,10 +31,16 @@ class CustomNavigator {
     switch (settings.name) {
       case Routes.home:
         return _pageRoute(MyHomePage());
-      case Routes.navigation:
-        return _pageRoute(NavigationScreen());
+
       case Routes.reminder:
-        return _pageRoute(ReminderPage());
+        final args = settings.arguments as Map<String, dynamic>;
+
+        final bool isEdit = args['isEdit'] as bool;
+        final ReminderModel reminderItem = args['reminderItem'] as ReminderModel;
+        return _pageRoute(ReminderPage(
+          isEdit: isEdit,
+          reminderItem:reminderItem,
+        ));
     }
     return MaterialPageRoute(builder: (_) => Container());
   }

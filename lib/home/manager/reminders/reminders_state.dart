@@ -1,6 +1,5 @@
 part of 'reminders_cubit.dart';
 
-@immutable
 sealed class RemindersState {}
 
 final class RemindersInitial extends RemindersState {}
